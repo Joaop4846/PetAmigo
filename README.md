@@ -14,7 +14,7 @@ Pré-requisitos: [Node.js](https://nodejs.org/) instalado (v18+).
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/PetAmigo.git
+git clone https://github.com/Joaop4846/PetAmigo.git
 cd PetAmigo
 
 # 2. Instale e rode o backend
