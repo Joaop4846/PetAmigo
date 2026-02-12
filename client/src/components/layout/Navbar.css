@@ -1,0 +1,146 @@
+.navbar {
+  width: 100%;
+  background: var(--bg-sidebar);
+  color: var(--text-inverse);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 60px;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.navbar__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.navbar__link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar__link--active {
+  color: #fff;
+  background: var(--primary);
+}
+
+.navbar__link--active:hover {
+  background: var(--primary-hover);
+}
+
+.navbar__icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity var(--transition);
+}
+
+.navbar__link:hover .navbar__icon {
+  opacity: 0.9;
+}
+
+.navbar__link--active .navbar__icon {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar__content {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .navbar__title {
+    font-size: 1rem;
+  }
+
+  .navbar__logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar__nav {
+    gap: 2px;
+  }
+
+  .navbar__link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+
+  .navbar__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__content {
+    height: 52px;
+  }
+
+  .navbar__brand {
+    gap: 6px;
+  }
+
+  .navbar__title {
+    font-size: 0.9rem;
+  }
+
+  .navbar__link span {
+    display: none;
+  }
+
+  .navbar__link {
+    padding: 8px;
+  }
+
+  .navbar__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

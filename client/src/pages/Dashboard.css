@@ -1,0 +1,171 @@
+.dash-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 16px;
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.dash__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+.dash__titulo {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.dash__resumo {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.dash__resumo strong {
+  color: var(--primary);
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.dash__resumo strong:hover {
+  opacity: 0.75;
+}
+
+.dash__recentes {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+}
+
+.dash__recentes-titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text);
+}
+
+.dash__vazio {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.dash__lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.dash__item:last-child {
+  border-bottom: none;
+}
+
+.dash__item:hover {
+  background: rgba(232, 115, 74, 0.02);
+}
+
+.dash__badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+  width: 64px;
+  text-align: center;
+}
+
+.dash__badge--cliente {
+  background: #eef2ff;
+  color: #4f5d75;
+}
+
+.dash__badge--pet {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.dash__item-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.dash__item-info strong {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.dash__item-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash__data {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .dash__top {
+    flex-direction: column;
+    margin-bottom: 28px;
+  }
+
+  .dash__titulo {
+    font-size: 1.35rem;
+  }
+
+  .dash__item {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .dash__badge {
+    font-size: 0.65rem;
+    width: 56px;
+    padding: 3px 8px;
+  }
+
+  .dash__data {
+    display: none;
+  }
+}

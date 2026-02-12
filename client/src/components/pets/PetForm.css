@@ -1,0 +1,175 @@
+.pet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pet-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+
+.pet-form__row>* {
+  min-width: 0;
+}
+
+
+.pet-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.pet-form__erro {
+  font-size: 0.825rem;
+  color: var(--danger);
+  background: var(--danger-light);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.pet-form__upload {
+  position: relative;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition);
+  overflow: hidden;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pet-form__upload:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+
+
+
+.pet-form__upload--drag {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: scale(1.01);
+}
+
+.pet-form__upload--filled {
+  border-style: solid;
+  border-color: var(--border-light);
+  cursor: default;
+  min-height: auto;
+}
+
+
+
+
+.pet-form__upload--filled:hover {
+  background: transparent;
+  border-color: var(--border);
+}
+
+.pet-form__file {
+  display: none;
+}
+
+.pet-form__dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.pet-form__dropzone svg {
+  opacity: 0.5;
+}
+
+.pet-form__dropzone span:first-of-type {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pet-form__dica {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+
+
+.pet-form__preview {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.pet-form__preview img {
+  max-height: 180px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+
+
+
+
+.pet-form__remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  opacity: 0;
+}
+
+.pet-form__upload:hover .pet-form__remove {
+  opacity: 1;
+}
+
+.pet-form__remove:hover {
+  background: var(--danger);
+  transform: scale(1.1);
+}
+
+.pet-form__error {
+  font-size: 0.8rem;
+  color: var(--danger);
+  margin-top: -10px;
+}
+
+
+@media (max-width: 768px) {
+  .pet-form__row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  .pet-form__actions {
+    flex-direction: column;
+  }
+
+
+
+  .pet-form__actions .btn {
+    width: 100%;
+  }
+}
