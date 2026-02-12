@@ -84,4 +84,7 @@ client/src/
 O backend está hospedado em plano gratuito do Render.
 Na primeira requisição após algum tempo sem uso, pode levar alguns segundos para responder (cold start).
 Após isso, a navegação ocorre normalmente.
+
 link da hospedagem: https://petamigo-1.onrender.com/
+
+Acesso via desktop e mobile.
